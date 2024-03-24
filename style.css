@@ -1,0 +1,605 @@
+@import url('https://cdn.jsdelivr.net/npm/normalize.css@latest/normalize.css');
+
+
+/* Your custom properties and styles below */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+} 
+
+html {
+  font-size: 62.5%; /* 62.5% of the default font size */
+}
+
+
+:root {
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+}
+:root {
+  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.3rem;
+  --font-size-xx-large: 4.8rem;
+}
+
+:root {
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+:root {
+  --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --line-height-small: 1.2;
+  --line-height-base: 1.5;
+  --line-height-big: 1.8;
+}
+
+:root {
+  --section-header-align: center;
+}
+:root {
+  --section-tagline-transform: uppercase;
+}
+
+:root {
+  --section-title-margin: 0;
+  --section-title-color: var(--color-black) 
+}
+
+:root {
+  --section-padding: 5rem 0;
+  --section-header-padding: 0 0 3rem;
+  --section-body-padding: 0 0 3rem;
+  --section-footer-padding: 3rem 0 0;
+  --section-footer-align: center;
+  --footer-padding: 5rem 0 1rem;
+}
+
+:root {
+  --nav-item-font-family: var(--font-family-title);
+  --nav-item-font-weight: var(--font-weight-bold);
+  --nav-item-font-size: var(--font-size-medium);
+  --nav-item-letter-spacing: 4%;
+  --nav-item-display: inline-block;
+  --nav-item-margin: 0 0 calc(3 * var(--root-font-size)) 0;
+  --nav-item-link-hover: var(--color-primary);
+}
+
+:root {
+  --section-tagline-margin: 0;
+}
+:root {
+  --button-display: inline-block;
+  --button-padding: 1.5rem 3rem;
+  --button-border: 0.2rem solid var(--color-primary);
+  --button-color: var(--color-black); /* Ensure this references the existing color-black variable */
+  --button-text-decoration: none;
+  --button-font-size: var(--font-size-large); /* Ensure this references the existing font-size-large variable */
+  --button-hover-color: var(--color-white); /* Ensure this references the existing color-white variable */
+  --button-hover-text-decoration: none;
+  --button-hover-background: var(--color-primary); /* Ensure this references the existing color-primary variable */
+}
+
+:root {
+  --header-padding: 4rem 0 0;
+  --header-logo-position: relative;
+  --header-logo-link-display: inline-block;
+  --header-logo-link-position: absolute;
+  --header-logo-link-top: -1rem;
+  --header-logo-link-left: 0;
+}
+
+
+
+body {
+  font-size: var(--font-size-medium);
+}
+
+body {
+  font-family: var(--font-family-base);
+}
+body {
+  font-weight: var(--font-weight-regular);
+}
+body {
+  color: var(--color-black);
+}
+
+body {
+  font-family: var(--font-family-base);
+}
+
+body {
+  line-height: var(--line-height-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-title);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-title);
+}
+
+
+
+a {
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+a[href]:visited {
+  font-style: italic;
+}
+a[href]:visited {
+  font-style: italic;
+}
+a[href]:hover {
+  text-decoration: underline;
+}
+
+a[href]:active {
+  background-color: var(--color-light-grey);
+}
+
+.button {
+  display: var(--button-display);
+  padding: var(--button-padding);
+  border: var(--button-border);
+  font-size: var(--button-font-size);
+  color: var(--button-color);
+  text-decoration: var(--button-text-decoration);
+  background: transparent; /* Assuming you want a transparent background initially */
+  cursor: pointer; /* Assuming you want the cursor to change to indicate it's clickable */
+}
+
+.button:hover {
+  color: var(--button-hover-color);
+  text-decoration: var(--button-hover-text-decoration);
+  background-color: var(--button-hover-background);
+}
+
+
+.visually-hidden {
+  display: none;
+}
+
+.card-category,
+.section-tagline {
+  color: var(--color-primary);
+}
+
+.section-tagline,
+.card-category {
+  color: var(--color-primary);
+}
+
+.section-header {
+  text-align: var(--section-header-align);
+}
+.section-tagline {
+  font-family: var(--font-family-title);
+  text-transform: var(--section-tagline-transform);
+  font-weight: var(--font-weight-bold);
+}
+
+.section-title {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-bold);
+  margin: var(--section-title-margin);
+  color: var(--section-title-color);
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto; /* This will evenly distribute the margins on both the left and right sides */
+}
+
+
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-header {
+  padding: var(--section-header-padding);
+}
+
+.section-body {
+  padding: var(--section-body-padding);
+}
+
+
+.section-footer {
+  padding: var(--section-footer-padding);
+  text-align: var(--section-footer-align);
+}
+
+.footer {
+  padding: var(--footer-padding);
+}
+
+
+
+.navbar-menu {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  float: right;
+}
+
+.nav-menu li {
+  list-style-type: none; /* Removes the default list styling */
+  margin-right: 20px; /* Adds space between each menu item; adjust as needed */
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-item {
+  font-family: var(--nav-item-font-family);
+  font-weight: var(--nav-item-font-weight);
+  font-size: var(--nav-item-font-size);
+  letter-spacing: var(--nav-item-letter-spacing);
+  display: var(--nav-item-display);
+  margin: var(--nav-item-margin);
+}
+
+.nav-link {
+  display: block;
+  padding: calc(0.5 * var(--root-font-size)) var(--root-font-size);
+}
+
+.nav-link:hover {
+  color: var(--nav-item-link-hover);
+}
+
+.nav-item-link-hover {
+  color: var(--color-white);
+}
+
+nav .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  width: 0;
+  height: 20%; /* Assuming 20% of the root element value is the intended height */
+}
+
+
+
+
+
+.section-tagline {
+  margin: var(--section-tagline-margin);
+}
+
+ul.row {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both; /* Prevent floating elements on both sides */
+}
+
+
+.col-1-3 {
+  width: 33.33%;
+  float: left;
+  padding: calc(0.5 * var(--root-font-size));
+}
+
+.col-1-2 {
+  width: 50%;
+  float: left;
+  padding: calc(0.5 * var(--root-font-size));
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--text-color);
+}
+
+.footer ul {
+  text-align: right;
+}
+
+[class^="col-"] {
+  float: left;
+  padding: calc(0.5 * var(--root-font-size));
+}
+
+.col-1-3,
+.col-1-2 {
+  float: none; /* Reset float property */
+  padding: 0; /* Reset padding property */
+}
+
+
+[data-section-theme="dark"] {
+  --text-color: var(--color-white);
+  --section-title-color: var(--color-white);
+  background: var(--color-black);
+}
+
+[data-section-theme="dark"] {
+  --button-color: var(--color-white); /* Overrides button color in dark theme */
+}
+
+
+.footer-address {
+  color: var(--text-color);
+}
+
+.social-link {
+  display: block;
+}
+
+.social-link svg {
+  fill: var(--text-color);
+}
+
+
+.card-services .card-title {
+  margin: 0; /* No margin on all sides */
+}
+
+.card-services a {
+  display: block; /* Render as block-level elements */
+  padding: calc(2 * var(--root-font-size)); /* Padding set to 2x the root element */
+}
+
+.card-services a:hover {
+  color: var(--color-white); /* Foreground color on hover */
+  background-color: var(--color-primary); /* Background color on hover */
+  text-decoration: none; /* No text decoration on hover */
+}
+
+.card-testimonial {
+  text-align: center;
+}
+
+.card-testimonial .card-avatar {
+  border-radius: 50%;
+  width: 10rem; /* Assuming 1rem is the root element size */
+  height: 10rem;
+}
+
+.card-testimonial .card-quote cite {
+  display: block;
+  padding-top: 1rem;
+  color: var(--color-primary); /* Make sure this references the existing variable */
+}
+
+.card-work .card-outer {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-work .card-image img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.card-work .card-inner {
+  position: absolute;
+  top: -0.1rem;
+  left: -0.1rem;
+  right: -0.1rem;
+  z-index: 1;
+}
+
+.card-work:hover .card-inner {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card-work .card-title {
+  text-align: center;
+  margin: 0;
+  opacity: 0;
+  height: 100%;
+  position: relative;
+}
+
+.card-work .card-title a,
+.card-work a {
+  display: block;
+  text-decoration: none;
+  padding-top: 45%;
+}
+
+.card-work .card-title a::after,
+.card-work a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card-work:hover .card-title {
+  opacity: 1;
+}
+
+.card-testimonial .card-quote {
+  position: relative;
+}
+
+.card-testimonial .card-quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -4.5rem;
+  left: -1rem;
+  color: #efeded;
+  font-size: 10rem;
+  z-index: -1;
+}
+
+
+
+.section-hero {
+  background-size: 90rem auto;
+}
+
+.section-hero .section-title {
+  margin-bottom: 5rem;
+}
+
+.section-hero .section-inner {
+  padding: 10rem 40rem 2rem 0;
+}
+
+.header {
+  padding: var(--header-padding);
+}
+
+.header-logo {
+  position: var(--header-logo-position);
+
+}
+
+.header-logo a {
+  display: var(--header-logo-link-display);
+  position: var(--header-logo-link-position);
+  top: var(--header-logo-link-top);
+  left: var(--header-logo-link-left);
+}
+
+
+
+
+/* Ensures the .section-body container takes full width */
+.section-body {
+  width: 100%;
+}
+
+/* Styles for the .row class */
+.row {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between the child elements */
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0 0 20px 0; /* Adds some margin to the bottom of each row for spacing */
+}
+
+/* Styles for the .col-1-3 class */
+.col-1-3 {
+  flex: 1; /* Each column takes equal space */
+  margin: 0 10px; /* Adds margin to the left and right for spacing */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+/* First and last .col-1-3 margin adjustment for proper alignment */
+.row .col-1-3:first-child {
+  margin-left: 0;
+}
+
+.row .col-1-3:last-child {
+  margin-right: 0;
+}
+
+/* Styles for the .card-services class */
+.card-services {
+  background: #e7e5e5a1; /* Background color for the card */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow to the card */
+  padding: 30px; /* Adds padding inside the card */
+  margin: 10px;
+}
+
+/* Hover effect for the cards */
+.card-services:hover {
+  color: var(--color-white); /* Foreground color on hover */
+  background-color: var(--color-primary); /* Background color on hover */
+  text-decoration: none; /* No text decoration on hover */
+  transform: translateY(-5px); /* Moves the card up slightly on hover */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the transform */
+}
+
+.card-title a {
+  color: #333; /* Sets the text color */
+  text-decoration: none; /* Removes the underline from the links */
+  font-weight: bold; /* Makes the font bold */
+}
+
+
+
+
+.header {
+  color: #fff; /* Text color */
+  padding: 20px 0; /* Padding for the header content */
+}
+
+
+
+.header-logo {
+  flex: 1; /* Takes up remaining space */
+}
+
+.navbar-menu {
+  flex: 1; /* Takes up remaining space */
+  text-align: right; /* Aligns the navigation menu to the right */
+  white-space: nowrap; /* Prevents wrapping of navigation items */
+}
+
+.nav-item {
+  display: inline-block; /* Displays the items horizontally */
+  margin-left: 20px; /* Adds space between the navigation items */
+  white-space: nowrap; /* Prevents wrapping of navigation items */
+}
+
+
+.nav {
+  list-style: none; /* Removes default list styling */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+
+.nav-link {
+  color: #fff; /* Text color for navigation links */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.nav-link:hover {
+  text-decoration: underline; /* Underline the links on hover */
+}
